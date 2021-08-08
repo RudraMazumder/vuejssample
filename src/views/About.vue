@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div v-if="city">About {{city}}</div>
+    <div v-else>About</div>
 </template>
+<script>
+export default {
+  data(){
+    return {
+      city: this.$route.params.city
+    }
+  }
+}
+</script>
